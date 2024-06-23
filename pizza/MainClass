@@ -1,0 +1,112 @@
+package p2;
+import p1.*;
+import java.util.*;
+public class MainClass
+{
+
+public static void welcome()
+{
+System.out.print("\u000C");
+System.out.println(" ");
+System.out.println("▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓ ▓ ▓▓▓▓▓ ");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓ ▓ ▓▓▓▓▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓▓▓▓▓ ");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓ ▓ ▓▓▓▓▓
+");
+System.out.println(" ");
+System.out.println(" ▓▓▓▓▓▓ ▓▓▓▓▓ ");
+System.out.println(" ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓ ▓");
+System.out.println(" ▓ ▓▓▓▓▓ ");
+System.out.println(" ");
+System.out.println(" ▓▓▓▓▓ ▓▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓ ");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓▓▓▓▓ ▓ ▓ ▓ ▓▓ ▓▓ ");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓ ▓ ");
+
+System.out.println(" ");
+System.out.println(" ▓▓▓▓▓ ▓ ▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓
+");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓▓▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓ ▓▓▓▓
+");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println("▓▓▓▓▓ ▓ ▓ ▓ ▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ");
+
+}
+
+String vs[]={" Veg Manchow Soup", "Veg Hot and Sour Soup" , "Tomato Soup"};
+String nvs[]={"Non-Veg Manchow Soup" , "Non-Veg Hot and Sour Soup"};
+String gb[]={"G'arlic Bread without cheese" , " Garlic Bread with cheese "};
+String vp[]={"Veg Tangy Pasta" , " Veg Cheesy Pasta" , "Veg Creamy Garlic Pasta "};
+String nvp[]={"Non-Veg Tangy Pasta" ,"Non-Veg Cheesy Pasta" ,"Non-Veg Creamy Garlic
+Pasta"};
+String vpi[]={"Veg Farmhouse" , "Veggie Paradise" , "Veg Extravaganza"};
+String nvpi[]={"Non-Veg Loaded" , "Chicken Dominator" , "Non-Veg Supreme"};
+String sd[]={"Coke" , "Sprite" , "Fanta"};
+String de[]={"Butterscotch" , "Choco Lava Cake" , "Fruit Punch"};
+double povs[]={200 , 240 , 240};
+double ponvs[]={250 , 270};
+double pogb[]={100 , 150 };
+double povp[]={150 , 200 , 250};
+double ponvp[]={250 , 300 , 350};
+double povpi[]={200 , 250 , 300};
+double ponvpi[]={300 , 350 , 400};
+double posd[]={50 , 30 , 20};
+double pode[]={100 , 150 , 200};
+String name="";
+
+String n;
+int i;
+int j;
+int ch;
+char choose;
+int cc=0;
+double quan[]=new double[50];
+double amt[]=new double[50];
+String n1[]=new String[50];
+int in=0;
+static char choice='y';
+public static void main(String args[])
+{
+
+Scanner sc=new Scanner(System.in);
+System.out.println("You want 1.Takeout\n2.Delivery");
+int c=sc.nextInt();
+if(c==1)
+{
+p1.pizzaoutlet p=new p1.pizzaoutlet();
+welcome();
+while(choice=='y' || choice=='Y')
+{
+p.menu();
+System.out.println("Are you sure you want to exit Pizza Express?");
+choice=sc.next().charAt(0);
+if(choice=='n' || choice=='N')
+{
+p.menu();
+}
+else if(choice=='y' || choice=='Y' )
+{
+
+break;
+}
+else
+{
+System.out.println("Wrong Choice");
+
+}
+}
+}
+else if(c==2)
+{
+p2.delivery d=new p2.delivery();
+d.getdata();
+d.getbill();
+
+}
+}
+}

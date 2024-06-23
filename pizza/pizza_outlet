@@ -1,0 +1,1235 @@
+package pizzaoutlet_;
+
+import java.util.*;
+public class pizza_outlet
+{
+
+Scanner sc=new Scanner(System.in);
+public static void welcome()
+{
+System.out.print("\u000C");
+System.out.println(" ");
+System.out.println("▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓ ▓ ▓▓▓▓▓ ");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓ ▓ ▓▓▓▓▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓▓▓▓▓ ");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓ ▓ ▓▓▓▓▓
+");
+System.out.println(" ");
+System.out.println(" ▓▓▓▓▓▓ ▓▓▓▓▓ ");
+System.out.println(" ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓ ▓");
+System.out.println(" ▓ ▓▓▓▓▓ ");
+System.out.println(" ");
+System.out.println(" ▓▓▓▓▓ ▓▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓ ");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓▓▓▓▓ ▓ ▓ ▓ ▓▓ ▓▓ ");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓ ▓▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓ ▓ ");
+
+System.out.println(" ");
+System.out.println(" ▓▓▓▓▓ ▓ ▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓
+");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println(" ▓▓▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓ ▓▓▓▓
+");
+System.out.println(" ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ▓ ");
+System.out.println("▓▓▓▓▓ ▓ ▓ ▓ ▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓▓ ▓▓▓▓▓ ");
+
+}
+
+
+String vs[]={&quot; Veg Manchow Soup&quot;, &quot;Veg Hot and Sour Soup&quot; , &quot;Tomato Soup&quot;};
+String nvs[]={&quot;Non-Veg Manchow Soup&quot; , &quot;Non-Veg Hot and Sour Soup&quot;};
+String gb[]={&quot;G&#39;arlic Bread without cheese&quot; , &quot; Garlic Bread with cheese &quot;};
+String vp[]={&quot;Veg Tangy Pasta&quot; , &quot; Veg Cheesy Pasta&quot; , &quot;Veg Creamy Garlic Pasta &quot;};
+String nvp[]={&quot;Non-Veg Tangy Pasta&quot; ,&quot;Non-Veg Cheesy Pasta&quot; ,&quot;Non-Veg Creamy Garlic Pasta&quot;};
+String vpi[]={&quot;Veg Farmhouse&quot; , &quot;Veggie Paradise&quot; , &quot;Veg Extravaganza&quot;};
+String nvpi[]={&quot;Non-Veg Loaded&quot; , &quot;Chicken Dominator&quot; , &quot;Non-Veg Supreme&quot;};
+String sd[]={&quot;Coke&quot; , &quot;Sprite&quot; , &quot;Fanta&quot;};
+String de[]={&quot;Butterscotch&quot; , &quot;Choco Lava Cake&quot; , &quot;Fruit Punch&quot;};
+double povs[]={200 , 240 , 240};
+double ponvs[]={250 , 270};
+double pogb[]={100 , 150 };
+double povp[]={150 , 200 , 250};
+double ponvp[]={250 , 300 , 350};
+
+double povpi[]={200 , 250 , 300};
+double ponvpi[]={300 , 350 , 400};
+double posd[]={50 , 30 , 20};
+double pode[]={100 , 150 , 200};
+String name=&quot;&quot;;
+String n;
+int i;
+int j;
+int ch;
+char choose;
+int cc=0;
+double quan[]=new double[50];
+double amt[]=new double[50];
+String n1[]=new String[50];
+int in=0;
+char choice=&#39;y&#39;;
+public void main()
+{
+welcome();
+while(choice==&#39;y&#39; || choice==&#39;Y&#39;)
+{
+menu();
+System.out.println(&quot;Are you sure you want to exit Pizza Express?&quot;);
+choice=sc.next().charAt(0);
+if(choice==&#39;n&#39; || choice==&#39;N&#39;)
+{
+menu();
+
+}
+else if(choice==&#39;y&#39; || choice==&#39;Y&#39; )
+{
+break;
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+main();
+}
+}
+}
+public void menu()
+{
+try
+{
+System.out.println(&quot;\t\t==========Pizza Outlet==========&quot;);
+System.out.println(&quot;Enter your choice according to the following:&quot;);
+System.out.println(&quot;1.Soups&quot;);
+System.out.println(&quot;2.Garlic Bread&quot;);
+System.out.println(&quot;3.Pasta&quot;);
+System.out.println(&quot;4.Veg Pizza&quot;);
+System.out.println(&quot;5.Non-Veg Pizza&quot;);
+System.out.println(&quot;6.Soft Drinks&quot;);
+System.out.println(&quot;7.Desserts&quot;);
+System.out.println(&quot;8.Exit&quot;);
+ch=sc.nextInt();
+
+try
+{
+switch(ch)
+{
+case 1:{
+Soups();
+break;
+}
+
+case 2:{
+GarlicBread();
+
+}
+break;
+case 3:{
+
+Pasta();
+}
+
+break;
+case 4:{
+
+VegPizza();
+}
+
+break;
+
+case 5:{
+NonVegPizza();
+}
+
+break;
+case 6:{
+SoftDrinks();
+}
+
+break;
+case 7:{
+
+Desserts();
+
+}
+
+break;
+
+case 8:{
+total();
+}
+break;
+default:{
+System.out.println(&quot;You have entered a Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+
+menu();
+}
+
+}
+}
+
+catch(Exception e)
+{
+while(true)
+{
+
+sc.nextLine();
+System.out.println(&quot;Invalid Choice&quot;);
+menu();
+continue;
+}
+}
+}
+catch(Exception e)
+{
+System.out.println(&quot;Invalid Choice&quot;);
+System.out.println(&quot;Enter again:&quot;);
+sc.nextLine();
+main();
+}
+}
+
+public void Soups()
+{
+System.out.println(&quot;You have selected &#39;Soups&#39; option&quot;);
+System.out.println(&quot;Enter your choice according to the following:&quot;);
+System.out.println(&quot;1.Manchow Soup..........200/250&quot;);
+System.out.println(&quot;2.Hot and Sour Soup..........240/270&quot;);
+System.out.println(&quot;3.Tomato Soup..........240&quot;);
+System.out.println(&quot;4.Main-Menu&quot;);
+int a=sc.nextInt();
+double quan1;
+double amt1=0;
+try
+{
+
+if(a==1)
+{
+System.out.println(&quot;Enter 1:Veg/2:Non-Veg&quot;);
+int aa=sc.nextInt();
+if(aa==1)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan1=sc.nextDouble();
+amt1=amt1+(povs[0]*quan1);
+System.out.println(&quot;The amount= &quot;+amt1);
+n1[cc]=vs[0];
+name=name.concat(n1[cc]);
+
+quan[cc]=quan1;
+amt[cc]=amt1;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Soups();
+}
+}
+else if(aa==2)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan1=sc.nextDouble();
+amt1=amt1+(ponvs[0]*quan1);
+System.out.println(&quot;The amount= &quot;+amt1);
+
+n1[cc]=nvs[0];
+name=name.concat(n1[cc]);
+quan[cc]=quan1;
+amt[cc]=amt1;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Soups();
+}
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+
+Soups();
+}
+}
+else if(a==2)
+{
+System.out.println(&quot;Enter 1:Veg/2:Non-Veg&quot;);
+int ab=sc.nextInt();
+if(ab==1)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan1=sc.nextDouble();
+amt1=amt1+(povs[1]*quan1);
+System.out.println(&quot;The amount= &quot;+amt1);
+n1[cc]=vs[1];
+name=name.concat(n1[cc]);
+quan[cc]=quan1;
+amt[cc]=amt1;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Soups();
+}
+}
+else if(ab==2)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan1=sc.nextDouble();
+amt1=amt1+(ponvs[1]*quan1);
+System.out.println(&quot;The amount= &quot;+amt1);
+n1[cc]=nvs[1];
+name=name.concat(n1[cc]);
+quan[cc]=quan1;
+amt[cc]=amt1;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Soups();
+}
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Soups();
+}
+}
+else if(a==3)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan1=sc.nextDouble();
+amt1=amt1+(povs[2]*quan1);
+System.out.println(&quot;The amount= &quot;+amt1);
+n1[cc]=vs[2];
+name=name.concat(n1[cc]);
+quan[cc]=quan1;
+
+amt[cc]=amt1;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Soups();
+}
+}
+else if(a==4)
+{
+menu();
+}
+else
+{
+System.out.println(&quot;Wrong Again&quot;);
+
+System.out.println(&quot;Try Again&quot;);
+Soups();
+}
+}
+
+catch(Exception e)
+{
+sc.nextLine();
+System.out.println(&quot;Wrong Choice&quot;);
+
+}
+}
+
+public void GarlicBread()
+{
+System.out.println(&quot;You have selected &#39;Garlic Bread&#39; option&quot;);
+System.out.println(&quot;Enter your choice according to the following:&quot;);
+System.out.println(&quot;1.Garlic Bread without cheese..........100&quot;);
+System.out.println(&quot;2.Garlic Bread with cheese..........150&quot;);
+System.out.println(&quot;3.Main-Menu&quot;);
+int b=sc.nextInt();
+double quan2;
+double amt2=0;
+try
+{
+if(b==1)
+
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan2=sc.nextDouble();
+amt2=amt2+(pogb[0]*quan2);
+System.out.println(&quot;The amount= &quot;+amt2);
+n1[cc]=gb[0];
+name=name.concat(n1[cc]);
+quan[cc]=quan2;
+amt[cc]=amt2;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+GarlicBread();
+}
+
+}
+else if(b==2)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan2=sc.nextDouble();
+amt2=amt2+(pogb[1]*quan2);
+System.out.println(&quot;The amount= &quot;+amt2);
+n1[cc]=gb[1];
+name=name.concat(n1[cc]);
+quan[cc]=quan2;
+amt[cc]=amt2;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+
+GarlicBread();
+}
+}
+
+else if(b==3)
+{
+menu();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+GarlicBread();
+}
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+public void Pasta()
+{
+System.out.println(&quot;You have selected &#39;Pasta&#39; option&quot;);
+System.out.println(&quot;Enter your choice according to the following:&quot;);
+System.out.println(&quot;1.Tangy Pasta..........150/250&quot;);
+System.out.println(&quot;2.Cheesy Pasta..........200/300&quot;);
+System.out.println(&quot;3.Creamy Garlic Pasta..........250/350&quot;);
+
+System.out.println(&quot;4.Main-Menu&quot;);
+int c=sc.nextInt();
+double quan3;
+double amt3=0;
+try
+{
+if(c==1)
+{
+System.out.println(&quot;Enter 1:Veg/2:Non-Veg&quot;);
+int ca=sc.nextInt();
+if(ca==1)
+{
+System.out.println(&quot;Enter quantity&quot;);
+quan3=sc.nextDouble();
+amt3=amt3+(povp[0]*quan3);
+System.out.println(&quot;The amount= &quot;+amt3);
+n1[cc]=vp[0];
+name=name.concat(n1[cc]);
+quan[cc]=quan3;
+amt[cc]=amt3;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wring Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+}
+}
+else if(ca==2)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan3=sc.nextDouble();
+amt3=amt3+(ponvp[0]*quan3);
+System.out.println(&quot;The amount= &quot;+amt3);
+n1[cc]=nvp[0];
+name=name.concat(n1[cc]);
+quan[cc]=quan3;
+amt[cc]=amt3;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+}
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+}
+}
+else if(c==2)
+{
+System.out.println(&quot;Enter 1:Veg/2:Non-Veg&quot;);
+int cb=sc.nextInt();
+if(cb==1)
+{
+
+System.out.println(&quot;Enter quantity:&quot;);
+quan3=sc.nextDouble();
+amt3=amt3+(povp[1]*quan3);
+System.out.println(&quot;The amount= &quot;+amt3);
+n1[cc]=vp[1];
+name=name.concat(n1[cc]);
+quan[cc]=quan3;
+amt[cc]=amt3;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+}
+}
+
+else if(cb==2)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan3=sc.nextDouble();
+amt3=amt3+(ponvp[1]*quan3);
+System.out.println(&quot;The amount= &quot;+amt3);
+n1[cc]=nvp[1];
+name=name.concat(n1[cc]);
+quan[cc]=quan3;
+amt[cc]=amt3;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+
+}
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+}
+}
+else if(c==3)
+{
+System.out.println(&quot;Enter 1:Veg/2:Non-Veg&quot;);
+int cc=sc.nextInt();
+if(cc==1)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan3=sc.nextDouble();
+amt3=amt3+(povp[2]*quan3);
+System.out.println(&quot;The amount= &quot;+amt3);
+n1[cc]=vp[2];
+name=name.concat(n1[cc]);
+quan[cc]=quan3;
+amt[cc]=amt3;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+}
+}
+else if(cc==2)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan3=sc.nextDouble();
+amt3=amt3+(ponvp[2]*quan3);
+System.out.println(&quot;The amount= &quot;+amt3);
+n1[cc]=nvp[2];
+name=name.concat(n1[cc]);
+quan[cc]=quan3;
+amt[cc]=amt3;
+cc++;
+in++;
+
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+}
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+}
+}
+else if(c==4)
+{
+menu();
+
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Pasta();
+}
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+public void VegPizza()
+{
+System.out.println(&quot;You have selected &#39;Veg Pizza&#39; option&quot;);
+System.out.println(&quot;Enter your choice according to the following:&quot;);
+System.out.println(&quot;1.Veg Farmhouse..........200&quot;);
+System.out.println(&quot;2.Veggie Paradise..........250&quot;);
+System.out.println(&quot;3.Veg Extravaganza..........300&quot;);
+System.out.println(&quot;4.Main-Menu&quot;);
+int d=sc.nextInt();
+double quan4;
+double amt4=0;
+try
+{
+if(d==1)
+
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan4=sc.nextDouble();
+amt4=amt4+(povpi[0]*quan4);
+System.out.println(&quot;The amount= &quot;+amt4);
+n1[cc]=vpi[0];
+name=name.concat(n1[cc]);
+quan[cc]=quan4;
+amt[cc]=amt4;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+VegPizza();
+}
+
+}
+else if(d==2)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan4=sc.nextDouble();
+amt4=amt4+(povpi[1]*quan4);
+System.out.println(&quot;The amount= &quot;+amt4);
+n1[cc]=vpi[1];
+name=name.concat(n1[cc]);
+quan[cc]=quan4;
+amt[cc]=amt4;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+
+VegPizza();
+}
+}
+else if(d==3)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan4=sc.nextDouble();
+amt4=amt4+(povpi[2]*quan4);
+System.out.println(&quot;The amount= &quot;+amt4);
+n1[cc]=vpi[2];
+name=name.concat(n1[cc]);
+quan[cc]=quan4;
+amt[cc]=amt4;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+VegPizza();
+}
+}
+else if(d==4)
+{
+menu();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+VegPizza();
+}
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+public void NonVegPizza()
+{
+System.out.println(&quot;You have selected &#39;Non-Veg Pizza&#39; option&quot;);
+System.out.println(&quot;Enter your choice according to the following:&quot;);
+System.out.println(&quot;1.Non-Veg Loaded.......300&quot;);
+System.out.println(&quot;2.Chicken Dominator......350&quot;);
+
+System.out.println(&quot;3.Non-Veg Supreme........400&quot;);
+System.out.println(&quot;4.Main-Menu&quot;);
+int z=sc.nextInt();
+double quan5;
+double amt5=0;
+try
+{
+if(z==1)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan5=sc.nextDouble();
+amt5=amt5+(ponvpi[0]*quan5);
+System.out.println(&quot;The amount= &quot;+amt5);
+n1[cc]=nvpi[0];
+name=name.concat(n1[cc]);
+quan[cc]=quan5;
+amt[cc]=amt5;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39;)
+{
+
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+NonVegPizza();
+}
+}
+else if(z==2)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan5=sc.nextDouble();
+amt5=amt5+(ponvpi[1]*quan5);
+System.out.println(&quot;The amount= &quot;+amt5);
+n1[cc]=nvpi[1];
+name=name.concat(n1[cc]);
+quan[cc]=quan5;
+amt[cc]=amt5;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+
+else if(choose==&#39;n&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+NonVegPizza();
+}
+}
+else if(z==3)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan5=sc.nextDouble();
+amt5=amt5+(ponvpi[2]*quan5);
+System.out.println(&quot;The amount= &quot;+amt5);
+n1[cc]=nvpi[2];
+name=name.concat(n1[cc]);
+quan[cc]=quan5;
+amt[cc]=amt5;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+
+menu();
+}
+else if(choose==&#39;n&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+NonVegPizza();
+}
+}
+else if(z==4)
+{
+menu();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+NonVegPizza();
+}
+}
+catch(Exception e)
+{
+System.out.println(e);
+
+}
+}
+public void SoftDrinks()
+{
+System.out.println(&quot;You have selected &#39;Soft Drinks&#39; option&quot;);
+System.out.println(&quot;Enter your choice according to the following:&quot;);
+System.out.println(&quot;1.Coke..........50&quot;);
+System.out.println(&quot;2.Sprite..........30&quot;);
+System.out.println(&quot;3.Fanta..........20&quot;);
+System.out.println(&quot;4.Main-Menu&quot;);
+int f=sc.nextInt();
+double quan6;
+double amt6=0;
+try
+{
+if(f==1)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan6=sc.nextDouble();
+amt6=amt6+(posd[0]*quan6);
+System.out.println(&quot;The amount= &quot;+amt6);
+n1[cc]=sd[0];
+name=name.concat(n1[cc]);
+quan[cc]=quan6;
+amt[cc]=amt6;
+cc++;
+in++;
+
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose== &#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+SoftDrinks();
+}
+}
+else if(f==2)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan6=sc.nextDouble();
+amt6=amt6+(posd[1]*quan6);
+System.out.println(&quot;The amount= &quot;+amt6);
+n1[cc]=sd[0];
+name=name.concat(n1[cc]);
+quan[cc]=quan6;
+amt[cc]=amt6;
+
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+SoftDrinks();
+}
+}
+else if(f==3)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan6=sc.nextDouble();
+amt6=amt6+(posd[2]*quan6);
+System.out.println(&quot;The amount= &quot;+amt6);
+n1[cc]=sd[2];
+name=name.concat(n1[cc]);
+
+quan[cc]=quan6;
+amt[cc]=amt6;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+SoftDrinks();
+}
+}
+else if(f==4)
+{
+menu();
+}
+else
+{
+
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+SoftDrinks();
+}
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+public void Desserts()
+{
+System.out.println(&quot;You have selected &#39;Desserts&#39; option&quot;);
+System.out.println(&quot;Enter your choice according to the following:&quot;);
+System.out.println(&quot;1.Butterscotch..........100&quot;);
+System.out.println(&quot;2.Choco Lava Cake..........150&quot;);
+System.out.println(&quot;3.Fruit Punch..........200&quot;);
+System.out.println(&quot;4.Main-Menu&quot;);
+int g=sc.nextInt();
+double quan7;
+double amt7=0;
+try
+{
+if(g==1)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan7=sc.nextDouble();
+
+amt7=amt7+(posd[2]*quan7);
+System.out.println(&quot;The amount= &quot;+amt7);
+n1[cc]=de[0];
+name=name.concat(n1[cc]);
+quan[cc]=quan7;
+amt[cc]=amt7;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Desserts();
+}
+}
+else if(g==2)
+{
+
+System.out.println(&quot;Enter quantity:&quot;);
+quan7=sc.nextDouble();
+amt7=amt7+(pode[1]*quan7);
+System.out.println(&quot;The amount= &quot;+amt7);
+n1[cc]=de[1];
+name=name.concat(n1[cc]);
+quan[cc]=quan7;
+amt[cc]=amt7;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Desserts();
+}
+}
+
+else if(g==3)
+{
+System.out.println(&quot;Enter quantity:&quot;);
+quan7=sc.nextDouble();
+amt7=amt7+(pode[2]*quan7);
+System.out.println(&quot;The amount= &quot;+amt7);
+n1[cc]=de[2];
+name=name.concat(n1[cc]);
+quan[cc]=quan7;
+amt[cc]=amt7;
+cc++;
+in++;
+System.out.println(&quot;Do you wish to continue(y/n)?&quot;);
+choose=sc.next().charAt(0);
+if(choose==&#39;y&#39; || choose== &#39;Y&#39;)
+{
+menu();
+}
+else if(choose==&#39;n&#39; || choose==&#39;N&#39;)
+{
+total();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Desserts();
+
+}
+}
+else if(g==4)
+{
+menu();
+}
+else
+{
+System.out.println(&quot;Wrong Choice&quot;);
+System.out.println(&quot;Try Again&quot;);
+Desserts();
+}
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+public void total()
+{
+
+double total=0;
+int k=1;
+System.out.println(&quot;Sr.No\t\tItem Description\t\tQuantity\t\tAmount&quot;);
+for(j=0;j&lt;in;j++)
+{
+total+=amt[j];
+
+n=name;
+System.out.println(k+&quot;\t\t&quot;+n1[j]+&quot;\t\t&quot;+quan[j]+&quot;\t\t\t&quot;+amt[j]);
+k++;
+}
+System.out.println(&quot;The total amount= &quot;+total);
+System.out.println(&quot;Thank you for using our software&quot;);
+}
+}

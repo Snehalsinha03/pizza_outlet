@@ -1,0 +1,29 @@
+package p2;
+import p1.pizzaoutlet;
+import java.util.*;
+interface deliveryinterface
+{
+public void getdata();
+public void getbill();
+}
+public class delivery implements deliveryinterface //interface class
+{
+public void getdata()
+{
+Scanner in = new Scanner(System.in);
+System.out.println("Enter name:");
+System.out.println("Enter Phone number:");
+System.out.println("Enter Address:");
+String name=in.next();
+int phno=in.nextInt();
+String add=in.nextLine();
+}
+public void getbill()
+{
+pizza_outlet ob=new pizza_outlet();
+ob.menu();
+System.out.println("Delivery charge= 50 Rupees");
+System.out.println("THANK YOU FOR USING OUR SOFTWARE");
+
+}
+}
